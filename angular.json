@@ -32,7 +32,9 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "asset/font-awesome/css/all.min.css",
+              "asset/font-awesome/css/fontawesome6.css"
             ],
             "scripts": []
           },
@@ -91,7 +93,9 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "asset/font-awesome/css/all.min.css",
+              "asset/font-awesome/css/fontawesome6.css"
             ],
             "scripts": []
           }
