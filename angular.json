@@ -33,6 +33,7 @@
             ],
             "styles": [
               "src/styles.scss",
+              "node_modules/primeflex/primeflex.css",
               "assets/font-awesome/css/all.min.css",
               "assets/font-awesome/css/fontawesome6.css"
             ],
@@ -94,6 +95,7 @@
             ],
             "styles": [
               "src/styles.scss",
+              "node_modules/primeflex/primeflex.css",
               "assets/font-awesome/css/all.min.css",
               "assets/font-awesome/css/fontawesome6.css"
             ],
