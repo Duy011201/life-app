@@ -5,7 +5,7 @@ import { SETTING } from './core/config/setting.config';
 
 export const routes: Routes = [
   {
-    path: SETTING.SYSTEM_PAGE.HEADER_HOME,
+    path: SETTING.SYSTEM_PAGE.RELATED_HOME,
     component: HomeComponent,
     data: {showHeader: true, showFooter: true},
   },
