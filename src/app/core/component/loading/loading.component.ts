@@ -8,10 +8,9 @@ import { Observable } from 'rxjs';
   imports: [CommonModule],
   standalone: true,
   templateUrl: './loading.component.html',
-  styleUrls: ['./loading.component.scss']
+  styleUrls: ['./loading.component.scss'],
 })
 export class LoadingComponent {
-
   isLoading$: Observable<boolean>;
 
   constructor(private loadingService: LoadingService) {

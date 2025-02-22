@@ -4,9 +4,9 @@ export const SETTING = {
     RELATED_ADMIN: 'admin',
     RELATED_AUTH: 'auth',
 
-    // TODO: Url for related home pages
     RELATED_NOT_FOUND: '**',
     RELATED_LOGIN: 'login',
-    RELATED_HOME: '',
-  }
-}
+    RELATED_HOME: 'home',
+    RELATED_ROOT: '',
+  },
+};

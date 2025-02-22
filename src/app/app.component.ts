@@ -1,28 +1,18 @@
-import { Component } from '@angular/core';
-import {
-  ActivatedRouteSnapshot,
-  ActivationEnd,
-  Router,
-  RouterOutlet,
-} from '@angular/router';
-import { LoadingComponent } from './core/component/loading/loading.component';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRouteSnapshot, ActivationEnd, Router, RouterOutlet } from '@angular/router';
 import { FooterComponent } from './core/component/footer/footer.component';
 import { HeaderComponent } from './core/component/header/header.component';
-import { CommonModule } from '@angular/common';
 import { filter, map } from 'rxjs';
+import { LoadingComponent } from '@app/core/component/loading/loading.component';
+import { CommonModule } from '@angular/common';
+import { PrimeNG } from 'primeng/config';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    LoadingComponent,
-    HeaderComponent,
-    FooterComponent,
-    CommonModule,
-  ],
+  imports: [RouterOutlet, HeaderComponent, CommonModule, FooterComponent, LoadingComponent],
   templateUrl: './app.component.html',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   /*
    * Default value for comp header and comp footer
    */
@@ -32,12 +22,15 @@ export class AppComponent {
   /*
    * Get value from router
    */
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private primeng: PrimeNG,
+  ) {
     this.router.events
       .pipe(
         filter((event) => event instanceof ActivationEnd),
         map((event) => (<ActivationEnd>event).snapshot),
-        map((snapshot) => (<ActivatedRouteSnapshot>snapshot).data)
+        map((snapshot) => (<ActivatedRouteSnapshot>snapshot).data),
       )
       .subscribe((data) => {
         const dataRouter = Object.assign({}, data);
@@ -48,5 +41,7 @@ export class AppComponent {
       });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.primeng.ripple.set(true);
+  }
 }

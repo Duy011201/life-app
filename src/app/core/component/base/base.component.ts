@@ -8,11 +8,11 @@ import { MessageService } from 'primeng/api';
 export abstract class BaseComponent implements OnDestroy {
   protected destroy$ = new Subject<void>();
 
-  constructor(private messageService: MessageService) {}
+  protected constructor(private messageService: MessageService) {}
 
   /*
-  * The handleError() method is used to handle errors in the
-  */
+   * The handleError() method is used to handle errors in the
+   */
   protected handleError(error: any) {
     this.messageService.add({
       severity: 'success',
@@ -22,9 +22,9 @@ export abstract class BaseComponent implements OnDestroy {
   }
 
   /*
-  * The ngOnDestroy() method is called when the component is destroyed.
-  * It calls the next() method of the destroy$ Subject to emit a value.
-  */
+   * The ngOnDestroy() method is called when the component is destroyed.
+   * It calls the next() method of the destroy$ Subject to emit a value.
+   */
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();

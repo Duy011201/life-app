@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SETTING } from '@app/core/config/setting.config';
 
 @Component({
   selector: 'app-not-found',
-  imports: [],
+  standalone: true,
   templateUrl: './not-found.component.html',
-  styleUrl: './not-found.component.scss'
+  styleUrl: './not-found.component.scss',
 })
-export class NotFoundComponent {
+export class NotFoundComponent implements OnInit {
   countdown = 15;
 
   constructor(private router: Router) {}

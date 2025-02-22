@@ -7,7 +7,6 @@ import { SidebarModule } from 'primeng/sidebar';
 import { TableModule } from 'primeng/table';
 import { FileUploadModule } from 'primeng/fileupload';
 import { ToastModule } from 'primeng/toast';
-import { MessageService } from 'primeng/api';
 import { CheckboxModule } from 'primeng/checkbox';
 import { InputTextModule } from 'primeng/inputtext';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
@@ -91,7 +90,7 @@ import { ChartModule } from 'primeng/chart';
     IconFieldModule,
     InputIconModule,
     CalendarModule,
-    ChartModule
+    ChartModule,
   ],
   exports: [
     CarouselModule,
@@ -137,8 +136,8 @@ import { ChartModule } from 'primeng/chart';
     IconFieldModule,
     InputIconModule,
     CalendarModule,
-    ChartModule
+    ChartModule,
   ],
-  providers: [MessageService],
+  providers: [],
 })
 export class PrimeNGModule {}

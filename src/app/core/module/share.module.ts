@@ -5,12 +5,14 @@ import { ToastModule } from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { HttpClientModule } from '@angular/common/http';
-import { LoadingService } from '../service/loading.service';
+import { LoadingService } from '@app/core/service/loading.service';
+import { PrimeNGModule } from '@app/core/module/primeng.module';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    PrimeNGModule,
     FormsModule,
     ToastModule,
     MessagesModule,
@@ -19,6 +21,7 @@ import { LoadingService } from '../service/loading.service';
   ],
   exports: [
     CommonModule,
+    PrimeNGModule,
     FormsModule,
     ToastModule,
     MessagesModule,
